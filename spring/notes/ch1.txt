@@ -1,0 +1,8 @@
+Chapter 1 : Starting a spring boot application
+
+-   Go to https://start.spring.io/
+    This website will help you to configure your spring boot application
+    -   Select language, project(mvn, gradle etc), and spring boot version.
+    -   Configure your project metadata.
+    -   Add dependencies. For start select spring website.
+    -   Now download the zip folder to begin with spring boot.
