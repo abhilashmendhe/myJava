@@ -1,0 +1,44 @@
+Chapter 2 : Maven
+
+2.1)
+It helps programmers manage their projects and all the things they need to build their programs.
+
+Maven manages Transitive Dependency: It's like a tree structure of dependencies from top to bottom. And maven manages to handle them pretty efficiently.
+
+Maven uses target directory. It puts all its stuff that it's process. Either jar files, docs and classes etc.
+
+2.2) Commands:
+
+a) mvnw [options] [<goal(s)>] [<phase(s)>]
+
+    - Maven has three phases
+    i)   clean   - Remove temporary directories and file
+
+    There is also pre-clean and post-clean
+    - pre-clean  - Hook for before cleaning.
+    - post-clean - Hook for actual cleaning.
+
+    ii)  default - Where the most usefull goals live. Mostly do building and testing and all good stuff.
+    iii) site    - All the docs are generated like reports, java docs etc.
+
+
+b) mvnw clean
+   - Cleans the target directory
+
+c) mvnw [default]
+        - compile : Compiles your code into bytecode.
+        - test    : Runs unit tests.                  (first executes compile then test)
+        - package : Creates a jar or war file.        (first executes compile then test and finally package)
+        - verify  : Runs cheks and integration tests. (first executes compile then test, then package and finally verify)
+
+
+
+
+2.3) Maven project directory structure (https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html)
+
+
+2.4) Maven workflow
+
+2.5) To run spring boot app using maven Commands
+
+$) mvnw spring-boot:run
