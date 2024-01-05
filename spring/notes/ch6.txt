@@ -1,0 +1,27 @@
+Chapter 6 : Databases
+
+6.1) Database Layers
+    a) Database Driver (bottom - 1st layer)
+        This allows to interact with database from your JAVA code.
+    b) (2nd layer)
+        i) JDBC
+            We consider this as a low level API, you interact with database using SQL queries.
+        ii) Spring JDBC
+            It is built on the top of JDBC. It makes little easier to interact with database than JDBC.
+    c) (3rd layer)
+        i) JPA (Java Persistence API)
+            It allows to interact with databases using JAVA objects. JPA built on top of JDBC. It's a high level API. Here we can swap the database we are using or persistence technology we are using and we don't have
+            to change a lot of code. Everything(querks) is handled by JPA.
+            JPA is just a specification. Actual implementaion is Hibernate (ORM).
+        ii) Spring Data JPA
+            It is built on top of JPA.
+
+6.2) Connect to in-memory H2 Database
+    Add configuration to application.properties file
+    spring.datasource.url=jdbc:h2:mem:testdb
+    spring.datasrouce.driverClassName=org.h2.Driver
+    spring.datasource.username=sa
+    spring.datasource.password=password
+
+    Even if the properties are not given, the spring automatically creates a URL by using beans
+
