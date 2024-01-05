@@ -1,0 +1,14 @@
+Chapter 5 : Configuration Files
+
+Refer : https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html
+
+Configuration files could be .properties or .yml files.
+
+5.2) We can also use environment variables..
+
+e.g running with diff. ports using cmd
+
+$] export SERVER_PORT=8082; mvnw spring-boot:run
+
+5.3) Configuration properties (Custom Configuration)
+
