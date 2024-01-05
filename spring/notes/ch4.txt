@@ -1,0 +1,38 @@
+Chapter 4 : Dependency Injection
+
+4.1) Inversion of Control
+
+    Let's say we have a class A, and inside class A we have 3 different classes B, C and D. The class A depends on these 3 classes.
+    One way to handle these dependencies we can create these classes (A,B,D) inside A class by using new keyword.
+    But when we want to change these classes, we actually need to change the code inside the class A. We don't want to do that.
+    Luckily we can create interfaces (B,C,D) instead classes. For these interfaces we need a concrete implementation.
+    We can create the implementation lets say in spring class and then we can inject them whereever we need them.
+
+    We should leave upto the framework to supply the concrete classes whereever we declare our interfaces via dependency injection.
+
+4.2) Introduction to Beans (for more guide: https://medium.com/@mgm06bm/understanding-java-beans-a-comprehensive-guide-for-beginners-684163011c82)
+    Beans referes to those concrete classes. Beans is a term used by spring framework or boot framework.
+    We used @Configuration class
+
+4.2) Other ways to create is using @Component and @Service
+
+4.3) Component Scanning
+    - It is a process starts when your app starts app.
+    - Spring boot look through your projects. It's going to look for beans and web beans that are needed.
+    - When app founds a class with @Componenet, it knows that it's a bean. Then it looks for, does this bean needs any dependencies. If no dependencies are declared or constructor found, then it
+    will create an instance of that bean class and place that bean in the spring application context.
+    - We declare @ComponenetScan at point our project, and then everywhere from that point downwards will then looked up beans that are needed.
+
+4.4) @SpringBootApplication
+    - It is an alias for number of differnet annotations.
+        - @Configuration : This identifies an Configuration class, which then spring look for beans during Component scanning phase.
+        - @ComponentScan : From this point in the project heiriarchy down, look for the beans and place that beans needed.
+        - @EnableAutoConfiguration : see 4.6
+
+4.6) AutoConfiguration
+    AutoConfiguration is a process that spring boot uses when it starts up to provide those sensible defaults and create all of those dependencies. Spring boot starts the collection of dependencies which are there to
+    solve a particular problem.
+
+    Look at the pom.xml file after creating a spring starter folder.
+    In pom.xml, we look at <dependency> and inside this we look at <artifactId> we see spring-boot-starter-web. This is the collection of dependencies taht we need in order to implement a web project, inlucding spring mvc and embedded
+    tomcat, which is a application container that we need in order to run our web project.
