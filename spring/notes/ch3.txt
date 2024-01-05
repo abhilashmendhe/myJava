@@ -1,0 +1,18 @@
+Chapter 3 : Spring framework vs. Spring Boot
+
+3.2) Spring boot or framework can be thought as n - layers. These layers consist of Presentation, Service and Persistence layer. The application is typically broken into these layers.
+
+a) Persistence layer  :
+    This layer is use to handle interactions with databases. We often consider entities which are java objects often mapped the domain to databases tables.
+    We typically use entities at this level to interact with database by using different patterns. These patterns are Repositories patterns and DAO(Data Access Objects) patterns.
+    Type of functionalities are CRUD, exposed by Repositories or DAO patterns. We can build our own functions in repositories or DAO patterns.
+
+b) Service layer      :
+    This layer uses all the functionalities exposed by Persistence layer and then use it to build the requirements that our applications are built to handle.
+    We typically do this by setting interfaces and classes. These are services.
+
+c) Presentation layer :
+    The goal of this layer is to take all the data from services layer and then expose this to user by using REST API, or GraphQL api or WebSocket api.
+    To use different API, we only need make changes in Presentation layer.
+
+
