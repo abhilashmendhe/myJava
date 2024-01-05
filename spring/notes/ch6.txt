@@ -25,3 +25,10 @@ Chapter 6 : Databases
 
     Even if the properties are not given, the spring automatically creates a URL by using beans
 
+6.4) Initialize DB Schema
+
+    In src/main/resources, create .sql files.
+    These files are triggered after a connection to DB is established.
+    In application.properties file add
+    spring.sql.init.mode=always    - This means we always want to run .sql files. Only used in demonstrating the db working. Not used in production.
+
