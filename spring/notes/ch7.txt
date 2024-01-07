@@ -1,0 +1,18 @@
+Chapter 7 : JDBC Template
+
+7.1) Jdbc Template Setup
+    - We create a JdbcTemplate Bean availabel in application context and we can now use to query our database.
+
+7.2) What is DAO(Data Access Object)?
+    - Let's imagine we have 3 services A, B and C that needs to interact with DB. Let's assume we are using JDBC then each of the service layer needs to about the structure about the DB, how to query from that DB using SQL and each needs
+    to do to and from JAVA objects and sql. It will result in whole bunch of duplicate code.
+
+    - DAO allows a separation between service layer and persistence layer. These DAO classes are responsible to know the structure of DB in relation to specific entitiy and handle all of the mapping to and from JAVA objects and SQL. Then
+    each of these services can inject the relevant DAO and make use via a nice clean interface. It allows an extra modularity which maintaining, wiritng and testing application.
+
+7.3) Setup DAO
+
+7.4) Create DAO
+    - Persistence layer exposes CRUD functionality
+
+7.6) Create Integration Test

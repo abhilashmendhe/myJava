@@ -36,3 +36,7 @@ Chapter 4 : Dependency Injection
     Look at the pom.xml file after creating a spring starter folder.
     In pom.xml, we look at <dependency> and inside this we look at <artifactId> we see spring-boot-starter-web. This is the collection of dependencies taht we need in order to implement a web project, inlucding spring mvc and embedded
     tomcat, which is a application container that we need in order to run our web project.
+
+links:
+    - https://www.baeldung.com/spring-bean
+    - https://gustavopeiretti.com/spring-boot-bean-annotation/
