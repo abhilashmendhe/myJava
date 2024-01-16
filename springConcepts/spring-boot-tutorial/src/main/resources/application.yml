@@ -1,0 +1,28 @@
+server:
+  port: 8082
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: abhi
+    url: jdbc:mysql://localhost:3306/dcbapp
+    driverClassName: org.h2.Driver
+    password: abhi@123
+  h2:
+    console:
+      enabled: 'true'
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: 'true'
+welcome:
+  message: Welcome to learning Spring Boot!!!
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
