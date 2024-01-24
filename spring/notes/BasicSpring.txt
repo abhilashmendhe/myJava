@@ -1,0 +1,23 @@
+------------------- Spring Boot Master Class -------------------------
+
+1) W's of Spring
+   - What is Spring Framework?
+      - Spring allows IOC(Inversion of Control). IOC is nothing but giving Control to framework itself. A programmer does not have to take control of creating objects in an application. Spring will do everythin.
+
+   - Advantages of Spring
+   - Life Cycle of Bean
+      - First, we create the definition of a Bean.
+      - After that spring will create or instantiated those beans.
+      - After that it will populate the properties. Whatever values you are provided for those beans. Spring will set those values for those properties.
+      - Post Initialization: Whatever the interfaces are implemented, those interfaces will be executed.
+      - Bean will be ready and available in the container.
+      - Pre Bean Destroy. After shutdown of container.
+      - Bean Destroy.
+      - For beans by default Singleton pattern is implemented.
+   - Dependency Injection
+      - With Dependency Injection we do IOC. It is nothing but giving dependencies of different classes to different classes. Suppose one class needs objects of another class then spring does the adding of these dependencies.
+
+   - Spring AOP(Aspect Oriented Programming)
+      - AOP gives flexibility to remove cross cutting concerns from app and separate it out from main business logic.
+
+2)
